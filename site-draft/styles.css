@@ -2944,19 +2944,49 @@ img { max-width: 100%; display: block; }
 
 @media (max-width: 640px) {
   .floating-cta-banner {
+    left: 16px;
+    bottom: 16px;
+    transform: translate(0, 150%);
+    width: calc(100% - 100px);
+    max-width: 270px;
+    padding: 10px 12px;
     flex-direction: column;
-    gap: 16px;
+    gap: 8px;
     align-items: stretch;
-    padding: 20px;
-    bottom: 96px; /* Avoid chat launcher */
+    border-radius: 10px;
+  }
+  .floating-cta-banner.is-visible {
+    transform: translate(0, 0);
   }
   .floating-cta-content {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
+    flex-direction: row;
+    align-items: center;
+    gap: 6px;
+  }
+  .floating-cta-badge {
+    font-size: 9px;
+    padding: 2px 5px;
+    border-radius: 3px;
+  }
+  .floating-cta-text {
+    font-size: 11px;
+    line-height: 1.35;
+  }
+  .floating-cta-text span {
+    display: none; /* Hide long subtext on mobile to save space */
   }
   .floating-cta-btn {
+    font-size: 11px;
+    padding: 6px 12px;
+    border-radius: 6px;
     justify-content: center;
+  }
+  .floating-cta-close {
+    top: -6px;
+    right: -6px;
+    width: 20px;
+    height: 20px;
+    font-size: 10px;
   }
 }
 
