@@ -2640,8 +2640,62 @@ img { max-width: 100%; display: block; }
     gap: 6px;
   }
   .case-story { padding: 22px; }
-  .roi-calculator { padding: 18px; }
-  .roi-result { padding: 22px; }
+  .roi-calculator {
+    padding: 12px;
+    gap: 12px;
+  }
+  .roi-controls {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+  .range-field {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 4px 8px;
+    padding: 8px 10px;
+  }
+  .range-field input {
+    grid-column: 1 / span 2;
+    margin: 2px 0 0;
+  }
+  .range-field span {
+    font-size: 11px;
+  }
+  .range-field strong {
+    font-size: 16px;
+  }
+  .roi-result {
+    padding: 14px 16px;
+  }
+  .roi-result > strong {
+    font-size: 28px;
+    margin-top: 4px;
+  }
+  .bar-chart {
+    gap: 8px;
+    margin-top: 14px;
+  }
+  .bar-row {
+    grid-template-columns: 75px 1fr;
+    gap: 8px;
+    font-size: 11px;
+  }
+  .bar-track,
+  .bar {
+    min-height: 26px;
+    border-radius: 6px;
+  }
+  .bar {
+    padding: 0 8px;
+    font-size: 11px;
+  }
+  .roi-result .note {
+    margin-top: 10px;
+    font-size: 10px;
+    line-height: 1.4;
+  }
   .resource-primary {
     padding: 28px;
   }
