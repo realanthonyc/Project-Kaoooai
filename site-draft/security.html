@@ -5,7 +5,7 @@
   <meta name="robots" content="noindex, nofollow, noarchive, noai, noimageai, nosnippet, noydir, noimageindex">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>セキュリティ | Kaoooai</title>
-  <meta name="description" content="Kaoooaiのセキュリティとコンプライアンス。データ非学習、国内セキュア環境、RBAC、監査ログ、個人情報除去に対応。">
+  <meta name="description" content="Kaoooaiのセキュリティとコンプライアンス。データ非学習、国内セキュア環境、RBAC、監査ログ、個人情報除去などの確認観点を整理します。">
   <link rel="icon" href="assets/brand-mark.svg">
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -32,7 +32,7 @@
   </header>
   <main>
     <section class="page-title"><div class="wrap"><h1>エンタープライズ利用を前提にしたセキュリティ設計</h1><p>生成AI活用と情報保護を両立するために、データ非学習、国内セキュア環境、権限管理、監査ログ、個人情報除去を重視しています。</p></div></section>
-    <section class="section"><div class="wrap split"><div><h2>企業のGround Truthを守るパートナーとして</h2><p>仕様、ソースコード、設計思想、レビュー観点は、企業にとって重要な知的資産です。Kaoooaiは、AI開発の速度だけでなく、機密情報と内部統制を守る運用設計を前提にしています。</p><div class="workflow-list"><div class="workflow-item"><strong>01</strong><div><h3>データの非学習</h3><p>お客様の入力データや生成成果物を、AIモデルの再学習に利用しません。</p></div></div><div class="workflow-item"><strong>02</strong><div><h3>国内セキュア環境</h3><p>要件に応じて国内インフラ、専用環境、閉域・Local AI構成を含めて検討します。</p></div></div><div class="workflow-item"><strong>03</strong><div><h3>権限管理・ログ</h3><p>RBACによる権限設定と、すべての操作履歴を記録する監査ログに対応します。</p></div></div></div></div><div class="media-frame reveal"><img src="assets/security-console.svg" alt="Kaoooaiのセキュリティ管理画面"></div></div></section>
+    <section class="section"><div class="wrap split"><div><h2>企業のGround Truthを守るパートナーとして</h2><p>仕様、ソースコード、設計思想、レビュー観点は、企業にとって重要な知的資産です。Kaoooaiは、AI開発の速度だけでなく、機密情報と内部統制を守る運用設計を前提にしています。</p><div class="workflow-list"><div class="workflow-item"><strong>01</strong><div><h3>データの非学習</h3><p>お客様の入力データや生成成果物を、AIモデルの再学習に利用しない運用を前提にします。</p></div></div><div class="workflow-item"><strong>02</strong><div><h3>国内セキュア環境</h3><p>要件に応じて国内インフラ、専用環境、閉域・Local AI構成を含めて検討します。</p></div></div><div class="workflow-item"><strong>03</strong><div><h3>権限管理・ログ</h3><p>RBACによる権限設定と、操作履歴を記録する監査ログに対応します。</p></div></div></div></div><div class="media-frame reveal"><img src="assets/security-console.svg" alt="Kaoooaiのセキュリティ管理画面"></div></div></section>
     <section class="section alt"><div class="wrap"><div class="section-head"><h2>個人情報・秘密情報をAI処理前に除去</h2><p>Privacy AIにより、安全化後データのみをLLMへ送信。名前、住所、Email、電話番号、銀行・カード番号、API Key、パスワードなどを対象にできます。</p></div><div class="feature-grid"><article class="card"><h3>漏洩リスク低減</h3><p>個人情報・秘密情報をAI処理前に除去し、安全な活用環境を実現します。</p></article><article class="card"><h3>ガバナンス強化</h3><p>権限、ログ、承認フローを組み合わせ、利用状況を管理します。</p></article><article class="card"><h3>Local AI対応</h3><p>オンプレミスや社内サーバーでのLocal AI環境構築にも対応可能です。</p></article></div></div></section>
     <section class="section">
       <div class="wrap">
@@ -85,7 +85,7 @@
               </svg>
             </div>
             <h3>Local型</h3>
-            <p>各開発用のPCや閉域ローカル環境内にAIモデルおよびSDKを直接構築し、一切の外部通信（インターネット接続）を必要としない完全隔離の構成です。</p>
+            <p>各開発用のPCや閉域ローカル環境内にAIモデルおよびSDKを構築し、外部通信を制限した隔離構成を検討できます。</p>
           </article>
         </div>
       </div>

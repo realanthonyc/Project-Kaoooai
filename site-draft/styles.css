@@ -363,6 +363,13 @@ img { max-width: 100%; display: block; }
   margin-top: 34px;
 }
 
+.resource-note {
+  max-width: 430px;
+  color: var(--muted);
+  font-size: 13.5px;
+  line-height: 1.6;
+}
+
 .resource-route {
   display: grid;
   gap: 12px;
@@ -1787,6 +1794,26 @@ img { max-width: 100%; display: block; }
 }
 
 .field textarea { min-height: 140px; resize: vertical; }
+
+.contact-after-submit {
+  margin-top: 18px;
+  border-top: 1px solid var(--line);
+  padding-top: 16px;
+  color: var(--muted);
+  font-size: 13.5px;
+  line-height: 1.65;
+}
+
+.contact-after-submit strong {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--navy);
+  font-size: 14px;
+}
+
+.contact-after-submit span {
+  display: block;
+}
 
 .faq {
   display: grid;
@@ -3785,6 +3812,5 @@ img { max-width: 100%; display: block; }
     display: none;
   }
 }
-
 
 
