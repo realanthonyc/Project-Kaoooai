@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="520" viewBox="0 0 1000 520" role="img" aria-labelledby="title">
+  <title id="title">Kaoooai workflow diagram</title>
+  <rect width="1000" height="520" rx="20" fill="#f7fafc"/>
+  <g font-family="Inter, Arial, sans-serif">
+    <text x="64" y="72" font-size="28" font-weight="800" fill="#10233d">要件からテストまで、成果物がつながる</text>
+    <text x="64" y="108" font-size="16" fill="#65758a">各エージェントが企業ルールを参照し、対抗AIが品質を確認します。</text>
+    <g transform="translate(64 160)">
+      <rect width="184" height="176" rx="14" fill="#fff" stroke="#dfe8ef"/>
+      <text x="26" y="48" font-size="18" font-weight="800" fill="#1d5ee6">01 PLAN</text>
+      <text x="26" y="84" font-size="14" fill="#43566e">詳細設計書生成</text>
+      <text x="26" y="116" font-size="13" fill="#65758a">仕様整理</text>
+      <text x="26" y="142" font-size="13" fill="#65758a">曖昧点抽出</text>
+    </g>
+    <path d="M266 248h82" stroke="#9db1c7" stroke-width="4" stroke-linecap="round"/>
+    <path d="M342 238l16 10-16 10" fill="none" stroke="#9db1c7" stroke-width="4" stroke-linecap="round"/>
+    <g transform="translate(374 160)">
+      <rect width="184" height="176" rx="14" fill="#fff" stroke="#dfe8ef"/>
+      <text x="26" y="48" font-size="18" font-weight="800" fill="#18314f">02 BUILD</text>
+      <text x="26" y="84" font-size="14" fill="#43566e">コード生成・改修</text>
+      <text x="26" y="116" font-size="13" fill="#65758a">規約準拠</text>
+      <text x="26" y="142" font-size="13" fill="#65758a">Git保存</text>
+    </g>
+    <path d="M576 248h82" stroke="#9db1c7" stroke-width="4" stroke-linecap="round"/>
+    <path d="M652 238l16 10-16 10" fill="none" stroke="#9db1c7" stroke-width="4" stroke-linecap="round"/>
+    <g transform="translate(684 160)">
+      <rect width="184" height="176" rx="14" fill="#fff" stroke="#dfe8ef"/>
+      <text x="26" y="48" font-size="18" font-weight="800" fill="#117e73">03 TEST</text>
+      <text x="26" y="84" font-size="14" fill="#43566e">テスト生成・実行</text>
+      <text x="26" y="116" font-size="13" fill="#65758a">C2条件網羅</text>
+      <text x="26" y="142" font-size="13" fill="#65758a">結果レポート</text>
+    </g>
+    <rect x="244" y="388" width="512" height="54" rx="12" fill="#0b1f3a"/>
+    <text x="298" y="422" font-size="16" font-weight="800" fill="#fff">対抗AIレビュー + 人による確認・承認</text>
+  </g>
+</svg>

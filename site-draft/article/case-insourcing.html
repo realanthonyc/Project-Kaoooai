@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>事業会社の内製開発：限られた体制で迅速なシステム改修と仕様の形式知化を両立 | Kaoooai</title>
+  <meta name="description" content="事業会社の内製開発（DX推進）部門におけるKaoooaiの匿名導入事例。ブラックボックス化した既存コードの解析、改修計画、仕様の形式知化への取り組みを紹介します。">
+  <meta property="og:type" content="article">
+  <link rel="icon" href="assets/brand-mark.svg">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+            <header class="site-header">
+    <nav class="nav" aria-label="グローバルナビゲーション">
+      <a class="brand" href="../index.html"><img src="../assets/brand-mark.svg" alt="">Kaoooai</a>
+      <div class="nav-links">
+        <a href="../about.html">Kaoooaiとは</a>
+        <a href="../features.html">機能</a>
+        <a href="../effect.html">導入効果</a>
+        <a href="../security.html">セキュリティ</a>
+        <a href="../flow.html">導入の流れ</a>
+        <a href="../cases.html">事例</a>
+        <a href="../articles.html">お役立ち情報</a>
+        <a href="../resources.html">資料・FAQ</a>
+      </div>
+      <div class="nav-actions">
+        <a class="button text" href="../contact.html?intent=material">資料請求</a>
+        <a class="button primary" href="../contact.html?intent=demo">デモ相談</a>
+      </div>
+      <button class="menu-toggle" type="button" aria-label="メニューを開く" aria-expanded="false">☰</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-title">
+      <div class="wrap">
+        <span class="article-type">匿名事例</span>
+        <h1>事業会社の内製開発：限られた体制で迅速なシステム改修と仕様の形式知化を両立</h1>
+        <p>2026.05.30 / 内製開発・DX推進部門 / 匿名事例</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap article-layout">
+        <article class="article-body">
+          <div class="case-hero-photo">
+            <img src="../assets/case-insourcing-team.png" alt="内製開発チームのシステム確認イメージ">
+          </div>
+
+          <div class="client-profile-box">
+            <div class="client-logo-placeholder">B社</div>
+            <div class="client-profile-meta">
+              <h4>製造業B社 / DX推進部門</h4>
+              <p>社内システムの改修を内製化したい一方、過去に外部委託で作られたコードと仕様が十分に整理されておらず、調査と影響確認に時間がかかっていた事業会社。</p>
+            </div>
+          </div>
+
+          <div class="case-summary-grid">
+            <article><span>課題</span><strong>既存システムの仕様が追いにくい</strong></article>
+            <article><span>対象工程</span><strong>コード調査、影響範囲確認、改修計画</strong></article>
+            <article><span>活用機能</span><strong>コード解析、改修エージェント、テスト生成</strong></article>
+            <article><span>重視点</span><strong>Ground Truth化と社内ナレッジ化</strong></article>
+          </div>
+
+          <p class="article-note">本記事は、内製開発・DX推進部門から寄せられる相談内容をもとにした匿名事例です。実名公開前の検討段階でも社内共有しやすいよう、課題と検証観点を中心にまとめています。</p>
+
+          <h2>導入前の課題</h2>
+          <p>B社では、基幹業務に関わる複数の社内システムを段階的に内製化していました。ただ、既存コードの背景にある業務ルールや例外処理が文書化されておらず、軽微な改修でも影響範囲の確認に時間がかかっていました。</p>
+          <p>担当者が異動すると仕様把握が難しくなり、改修のたびに外部ベンダーへの確認が必要になる状態でした。内製化を進めたいものの、社内メンバーだけで安全に判断できる情報が不足していたことが最大の課題です。</p>
+
+          <h2>Kaoooaiでの取り組み</h2>
+          <p>Kaoooaiでは、対象システムのソースコード、既存設計書、テスト仕様、業務ルールを読み込み、改修対象の周辺構造を整理します。コード解析エージェントが影響範囲を洗い出し、改修エージェントが計画案と変更差分を提示します。</p>
+          <p>重要なのは、AIが作業するだけではなく、確認した仕様や判断基準をGround Truthとして蓄積していく点です。PoCのたびに業務ルール、例外条件、テスト観点が整理され、次の改修で再利用しやすい社内ナレッジになります。</p>
+
+          <h2>PoCで確認するポイント</h2>
+          <p>PoCでは、変更頻度が高く、かつ影響範囲が見えにくい機能をひとつ選びます。従来の調査時間、改修計画の妥当性、生成されたテスト観点、実行後のレポートを比較し、実運用に乗せられるかを確認します。</p>
+          <p>セキュリティ面では、データ非学習、閉域環境、個人情報除去、監査ログの要件を確認します。社内システムを扱うため、AI活用の便利さだけでなく、情報管理の説明責任を満たせることが導入判断の前提になります。</p>
+
+          <h2>期待される変化</h2>
+          <p>B社のような事業会社では、Kaoooaiは「開発を速くするツール」であると同時に、「仕様を社内に取り戻す仕組み」として機能します。属人化していた知識を整理し、改修判断に必要な情報をチームで共有できる状態をつくります。</p>
+          <p>結果として、外部ベンダーにすべてを依存する体制から、社内で判断し、必要な部分だけを外部と連携する体制へ移行しやすくなります。</p>
+
+          <table class="metric-table" style="margin-top: 34px;">
+            <tbody>
+              <tr><th>比較対象</th><td>手作業による既存コード調査、影響範囲整理、改修後テスト</td></tr>
+              <tr><th>確認成果物</th><td>改修計画、影響範囲レポート、テスト観点、改修差分、Ground Truth更新項目</td></tr>
+              <tr><th>適用エージェント</th><td>コード解析、改修、テストケース生成・実行、自己分析・改善提案</td></tr>
+            </tbody>
+          </table>
+        </article>
+
+        <aside class="article-side">
+          <div class="card">
+            <h3>関連ページ</h3>
+            <p>
+              <a href="../cases.html">導入事例・活用シーン一覧</a><br>
+              <a href="../flow.html">導入の流れとステップ</a><br>
+              <a href="docs.html">技術・APIドキュメント</a>
+            </p>
+          </div>
+          <div class="card">
+            <h3>次のアクション</h3>
+            <p>代表的な改修対象システム、既存のソースコード、現在のテスト資産をもとに、PoCの実施プランを策定できます。</p>
+            <p style="margin-top:16px">
+              <a class="button primary" href="../contact.html?intent=poc">PoC・デモについて相談する</a>
+            </p>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+            <footer class="site-footer">
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href="../index.html"><img src="../assets/brand-mark.svg" alt="">Kaoooai</a>
+        <p>AIエージェント主導の開発基盤。日本企業の開発標準化、品質保証、セキュリティ要件に対応します。</p>
+      </div>
+      <div class="footer-links">
+        <div>
+          <h3>プロダクト</h3>
+          <a href="../about.html">Kaoooaiとは</a>
+          <a href="../features.html">機能</a>
+          <a href="../security.html">セキュリティ</a>
+          <a href="../cases.html">導入事例</a>
+        </div>
+        <div>
+          <h3>リソース</h3>
+          <a href="../articles.html">お役立ち情報</a>
+          <a href="docs.html">技術ドキュメント</a>
+          <a href="../resources.html">資料・FAQ</a>
+          <a href="resources.html#faq">よくある質問 (FAQ)</a>
+          <a href="../contact.html">お問い合わせ・デモ相談</a>
+        </div>
+        <div>
+          <h3>会社情報</h3>
+          <a href="https://www.istart.co.jp/about.html" target="_blank" rel="noopener">会社概要</a>
+          <a href="../security.html">セキュリティ方針</a>
+          <a href="../contact.html?intent=security">セキュリティ要件の相談</a>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">© 2026 Kaoooai. All rights reserved.<a href="../sitemap.html">サイトマップ</a></div>
+  </footer>
+
+  <!-- Global Live Chat Widget -->
+  <button class="chat-launcher" type="button" aria-label="チャット相談を開く" data-chat-toggle>
+    <svg class="chat-icon" viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z"/></svg>
+    <span class="close-icon">×</span>
+  </button>
+  
+  <div class="chat-window" id="chat-window">
+    <div class="chat-header">
+      <div class="chat-avatar">AI</div>
+      <div class="chat-header-info">
+        <h3>Kaoooai 導入アシスタント</h3>
+        <p>内容に応じてご案内します</p>
+      </div>
+    </div>
+    <div class="chat-body" id="chat-body">
+      <div class="chat-msg bot">
+        はじめまして！Kaoooai（カオーアイ）導入サポートです。どのような情報をお探しですか？ご希望の内容を選択してください。
+      </div>
+      <div class="chat-options">
+        <button class="chat-opt-btn" type="button" data-chat-opt="material">サービス紹介資料をもらう</button>
+        <button class="chat-opt-btn" type="button" data-chat-opt="demo">画面デモ・PoCの日程調整</button>
+        <button class="chat-opt-btn" type="button" data-chat-opt="custom">直接メッセージを入力する</button>
+      </div>
+    </div>
+    <div class="chat-footer">
+      <input class="chat-input" type="text" placeholder="メッセージを入力してください..." aria-label="メッセージを入力" data-chat-input disabled>
+      <button class="chat-send-btn" type="button" data-chat-send disabled>送信</button>
+    </div>
+  </div>
+  <script src="../app.js"></script>
+</body>
+</html>

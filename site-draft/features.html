@@ -1,0 +1,604 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>主要機能とプロセス | Kaoooai</title>
+  <meta name="description" content="Kaoooaiの自律型AIエージェント機能。詳細設計生成、コード生成、テスト生成・実施、自動改修、E2Eテスト、個人情報除去、自己改善提案。標準化された生成基盤と対抗AIレビューで品質の底上げを支援します。">
+  <link rel="icon" href="assets/brand-mark.svg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+            <header class="site-header">
+    <nav class="nav" aria-label="グローバルナビゲーション">
+      <a class="brand" href="index.html"><img src="assets/brand-mark.svg" alt="">Kaoooai</a>
+      <div class="nav-links">
+        <a href="about.html">Kaoooaiとは</a>
+        <a href="features.html">機能</a>
+        <a href="effect.html">導入効果</a>
+        <a href="security.html">セキュリティ</a>
+        <a href="flow.html">導入の流れ</a>
+        <a href="cases.html">事例</a>
+        <a href="articles.html">お役立ち情報</a>
+        <a href="resources.html">資料・FAQ</a>
+      </div>
+      <div class="nav-actions">
+        <a class="button text" href="contact.html?intent=material">資料請求</a>
+        <a class="button primary" href="contact.html?intent=demo">デモ相談</a>
+      </div>
+      <button class="menu-toggle" type="button" aria-label="メニューを開く" aria-expanded="false">☰</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-title">
+      <div class="wrap">
+        <h1>Kaoooaiの機能・プロセス</h1>
+        <p>詳細設計、コード生成、テスト、改修、E2E、個人情報除去までをAIエージェントでつなぎます。人は計画確認、レビュー、承認、例外判断に集中できます。</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>開発工程全体をつなぐKaoooaiのシステム構成</h2>
+          <p>資料、既存コード、開発規約、レビュー観点をインプットとし、各AIエージェントが成果物を生成・検証します。対抗AIレビューと人による承認を組み合わせ、品質とガバナンスを両立します。</p>
+        </div>
+        
+        <div class="platform-container reveal">
+          <!-- Main Kaoooai Platform Blueprint Card -->
+          <div class="kaoooai-platform-box">
+            
+            <!-- Title & Subtitle Block on the top of the box -->
+            <div class="platform-header-block">
+              <h3 class="platform-title">Kaoooai コード解析プラットフォーム</h3>
+              <p class="platform-subtitle">既存コードと依存関係を解析し、影響調査、改修範囲の判断、テスト対象の整理に利用します。</p>
+            </div>
+            
+            <div class="platform-grid-layout">
+              <!-- Left Column: Code Analysis Platform (Directly on blue bg, no boxes) -->
+              <div class="platform-column-left">
+                <!-- Database Analysis Segment -->
+                <div class="direct-analysis-item">
+                  <div class="direct-visual-icon" title="コードデータベース解析">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="direct-svg">
+                      <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                      <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                      <path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"></path>
+                    </svg>
+                  </div>
+                  <div class="direct-text-info">
+                    <h4>コードデータベース解析</h4>
+                    <p>既存リポジトリの全コードをインデックス化し、<br>構造的なコード検索を可能にします。</p>
+                  </div>
+                </div>
+                
+                <!-- Dependency Mapping Segment -->
+                <div class="direct-analysis-item">
+                  <div class="direct-visual-icon" title="システム依存関係マッピング">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="direct-svg">
+                      <circle cx="12" cy="12" r="3"></circle>
+                      <circle cx="19" cy="5" r="3"></circle>
+                      <circle cx="5" cy="19" r="3"></circle>
+                      <circle cx="19" cy="19" r="3"></circle>
+                      <circle cx="5" cy="5" r="3"></circle>
+                      <line x1="17" y1="7" x2="14" y2="10"></line>
+                      <line x1="7" y1="17" x2="10" y2="14"></line>
+                      <line x1="17" y1="17" x2="14" y2="14"></line>
+                      <line x1="7" y1="7" x2="10" y2="10"></line>
+                    </svg>
+                  </div>
+                  <div class="direct-text-info">
+                    <h4>システム依存関係マッピング</h4>
+                    <p>モジュールや関数間の依存関係を自動生成し、<br>影響調査と改修範囲を自動で判定します。</p>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Right Column: Agents, Reviews, Self-Analysis, and Ground Truth Capabilities -->
+              <div class="platform-column-right">
+                <!-- Top AI Agents Group -->
+                <div class="agent-section-box">
+                  <div class="section-label">AIエージェント群</div>
+                  <div class="agent-chips-grid">
+                    <!-- Chip 1: 設計生成 (Pencil Icon) -->
+                    <div class="agent-chip">
+                      <div class="agent-icon-wrap">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="chip-svg">
+                          <path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
+                        </svg>
+                      </div>
+                      <span>設計生成</span>
+                    </div>
+                    
+                    <!-- Chip 2: コード生成 (Braces Icon) -->
+                    <div class="agent-chip">
+                      <div class="agent-icon-wrap">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="chip-svg">
+                          <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+                        </svg>
+                      </div>
+                      <span>コード生成</span>
+                    </div>
+                    
+                    <!-- Chip 3: テスト生成 (Document Icon) -->
+                    <div class="agent-chip">
+                      <div class="agent-icon-wrap">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="chip-svg">
+                          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/>
+                        </svg>
+                      </div>
+                      <span>テスト生成</span>
+                    </div>
+                    
+                    <!-- Chip 4: テスト実行 (Check-Circle Icon) -->
+                    <div class="agent-chip">
+                      <div class="agent-icon-wrap">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="chip-svg">
+                          <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>
+                        </svg>
+                      </div>
+                      <span>テスト実行</span>
+                    </div>
+                    
+                    <!-- Chip 5: 改修 (Sync/Refresh Icon) -->
+                    <div class="agent-chip">
+                      <div class="agent-icon-wrap">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="chip-svg">
+                          <path d="M23 4v6h-6"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/>
+                        </svg>
+                      </div>
+                      <span>改修</span>
+                    </div>
+                    
+                    <!-- Chip 6: 画面投入 (Monitor Icon) -->
+                    <div class="agent-chip">
+                      <div class="agent-icon-wrap">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="chip-svg">
+                          <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>
+                        </svg>
+                      </div>
+                      <span>画面投入</span>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- Opposing AI Agent -->
+                <div class="review-section-box">
+                  <div class="section-label">対抗（レビュー）AIエージェント</div>
+                  <p class="review-desc">対抗AIが、計画や生成結果に対して、正確性・不足点・改善点をチェックする。</p>
+                </div>
+                
+                <!-- AI Self-Analysis & Proposer Banner -->
+                <div class="proposal-section-box">
+                  <div class="section-label">AIによる自己分析と改善提案</div>
+                  <p class="proposal-desc">AIが自身の入力・出力・実行ログを分析し、改善可能なポイントを抽出して提案</p>
+                </div>
+                
+                <!-- Bottom Capabilities Layers -->
+                <div class="bottom-capabilities-grid">
+                  <!-- Ground Truth (Standardization) -->
+                  <div class="capability-card ground-truth-cap">
+                    <div class="cap-header">
+                      <strong>標準化</strong>
+                      <span class="badge-custom">Ground Truth</span>
+                    </div>
+                    <p class="cap-desc">ドキュメント雛形、サンプル、開発ルール・規約、レビュー観点・チェックリスト</p>
+                  </div>
+                  
+                  <!-- Memory Block -->
+                  <div class="capability-card memory-cap">
+                    <strong>メモリ</strong>
+                    <p class="cap-desc">臨時／Session／短期／長期記憶</p>
+                  </div>
+                  
+                  <!-- Extensions Grid -->
+                  <div class="capability-extensions-grid">
+                    <div class="ext-card">Instructions</div>
+                    <div class="ext-card">Skills</div>
+                    <div class="ext-card">MCP</div>
+                    <div class="ext-card">Tools</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Foundational AI LLM Layer (Visually Unified Bed) -->
+            <div class="platform-foundation-layer">
+              <div class="foundation-arrow-container">
+                <svg class="foundation-arrow" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z"/>
+                </svg>
+                <span class="foundation-arrow-text">Cognitive Foundation（推論・生成能力をリアルタイム供給）</span>
+                <svg class="foundation-arrow" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z"/>
+                </svg>
+              </div>
+              
+              <div class="llm-foundation-box">
+                <div class="llm-foundation-header">AI LLM（大規模言語モデル）層 — セキュアに選択・切り替え可能</div>
+                <div class="llm-providers-flex">
+                  <div class="llm-prov-card" title="OpenAI GPT Model">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="llm-svg">
+                      <circle cx="12" cy="12" r="4"/><circle cx="12" cy="4" r="2"/><circle cx="12" cy="20" r="2"/><circle cx="4" cy="12" r="2"/><circle cx="20" cy="12" r="2"/><path d="M12 6v2M12 16v2M6 12h2M16 12h2"/>
+                    </svg>
+                    <span class="llm-name">GPT系</span>
+                  </div>
+                  <div class="llm-prov-card" title="Anthropic Claude Model">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="llm-svg">
+                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                    </svg>
+                    <span class="llm-name">Claude系</span>
+                  </div>
+                  <div class="llm-prov-card" title="Google Gemini Model">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="llm-svg">
+                      <path d="M12 2c0 5.523 4.477 10 10 10c-5.523 0-10 4.477-10 10c0-5.523-4.477-10-10-10c5.523 0 10-4.477 10-10z"/>
+                    </svg>
+                    <span class="llm-name">Gemini系</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="wrap ground-truth-focus">
+        <div>
+          <span class="eyebrow">Ground Truth</span>
+          <h2>開発規約と暗黙知を「Ground Truth」として統合</h2>
+          <p>企業固有の開発規約、設計テンプレート、レビュー方針、暗黙知の業務ルールを構造化し、AIエージェントの強固な行動規範「Ground Truth」として統合。個々のエンジニアの記述力に依存しない、組織レベルでの高品質な開発プロセスを再現可能にします。</p>
+        </div>
+        <div class="truth-points">
+          <article>
+            <strong>01</strong>
+            <h3>暗黙知の形式知化</h3>
+            <p>現場の例外処理ルールや独自のアーキテクチャ設計方針をPoCを通じて徹底的に言語化します。</p>
+          </article>
+          <article>
+            <strong>02</strong>
+            <h3>AI実行エンジンへのマッピング</h3>
+            <p>言語化した規約をAI専用のInstructions、Skills、およびコードチェックルールへマッピングします。</p>
+          </article>
+          <article>
+            <strong>03</strong>
+            <h3>一貫した自律生成と検証</h3>
+            <p>設計・実装・テスト・自動改修の各工程において、共通のGround Truthに準拠した成果物を自律生成します。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>主要機能とプロセス</h2>
+          <p>詳細設計からコード実装、単体テスト、自動修復、そしてE2Eブラウザテストまで、各AIエージェントが自律的に連携する高効率ワークサイクル。</p>
+        </div>
+        
+        <div class="alternating-features">
+          <!-- Step 01 -->
+          <div class="feature-block">
+            <div class="feature-info">
+              <span class="step-num">01: Analysis</span>
+              <h3>コード解析・影響調査</h3>
+              <p>既存のソースコード、システム依存関係、各種開発規約、およびINPUTとなる要件定義資料を包括的に読み取り、改修に伴う影響範囲や適用すべき設計方針の前提条件を自律的に整理します。</p>
+              <ul class="feature-tags">
+                <li>既存コード解析</li>
+                <li>影響範囲調査</li>
+                <li>差分抽出</li>
+              </ul>
+            </div>
+            <div class="feature-visual">
+              <img src="assets/kaoooai-dashboard.png" alt="コード解析と影響調査ダッシュボード">
+            </div>
+          </div>
+
+          <!-- Step 02 -->
+          <div class="feature-block reverse">
+            <div class="feature-info">
+              <span class="step-num">02: Design</span>
+              <h3>詳細設計書生成</h3>
+              <p>要件定義資料とGround Truth（貴社設計テンプレートやサンプル）を参照し、開発者がすぐにレビューおよび実装に移れる粒度で詳細設計書、入出力定義、処理シーケンス、例外処理、テスト設計観点を自動生成します。</p>
+              <ul class="feature-tags">
+                <li>設計書テンプレート準拠</li>
+                <li>仕様書自動生成</li>
+                <li>レビュー項目抽出</li>
+              </ul>
+            </div>
+            <div class="feature-visual">
+              <img src="assets/kaoooai-dashboard.png" alt="詳細設計書生成画面">
+            </div>
+          </div>
+
+          <!-- Step 03 -->
+          <div class="feature-block">
+            <div class="feature-info">
+              <span class="step-num">03: Coding</span>
+              <h3>ソースコード生成・ビルド確認</h3>
+              <p>生成された詳細設計書に厳格に基づき、ディレクトリ構成、命名規則、コーディング基準に準拠したソースコードを自動生成。Lintチェックやビルド検証、静的解析を繰り返し、AI専用のGitブランチに自動保存します。</p>
+              <ul class="feature-tags">
+                <li>命名規約準拠</li>
+                <li>Lintエラー自動修復</li>
+                <li>Gitブランチ自動保存</li>
+              </ul>
+            </div>
+            <div class="feature-visual">
+              <img src="assets/kaoooai-dashboard.png" alt="ソースコード生成ダッシュボード">
+            </div>
+          </div>
+
+          <!-- Step 04 -->
+          <div class="feature-block reverse">
+            <div class="feature-info">
+              <span class="step-num">04: Unit Testing</span>
+              <h3>テストコード生成・実行</h3>
+              <p>詳細設計書とソースコードを読み込み、正常系・異常系・境界値・例外系テストケースを自動抽出し、単体テストコードを自動生成・実行。カバレッジC2（条件網羅）水準を目指し、実行結果の検証レポートを出力します。</p>
+              <ul class="feature-tags">
+                <li>正常・異常系テスト</li>
+                <li>カバレッジC2水準</li>
+                <li>テスト自動実行</li>
+              </ul>
+            </div>
+            <div class="feature-visual">
+              <img src="assets/kaoooai-dashboard.png" alt="テスト自動生成と実行結果画面">
+            </div>
+          </div>
+
+          <!-- Step 05 -->
+          <div class="feature-block">
+            <div class="feature-info">
+              <span class="step-num">05: E2E Testing</span>
+              <h3>E2E画面自動テスト投入</h3>
+              <p>自然言語で記述されたE2Eシナリオを元に、テストコードを手動作成することなく、ブラウザの起動、入力操作、ボタンクリック、ポップアップ制御、画面遷移検証、UI表示状態のスクリーンキャプチャ取得、成否判定レポート出力を完全に自律実行します。</p>
+              <ul class="feature-tags">
+                <li>ノーコードE2E</li>
+                <li>自律ブラウザ操作</li>
+                <li>画面エビデンス取得</li>
+              </ul>
+            </div>
+            <div class="feature-visual">
+              <img src="assets/kaoooai-dashboard.png" alt="E2Eブラウザ自律テスト画面">
+            </div>
+          </div>
+
+          <!-- Step 06 -->
+          <div class="feature-block reverse">
+            <div class="feature-info">
+              <span class="step-num">06: Privacy</span>
+              <h3>個人情報除去（PII Masking）</h3>
+              <p>個人名、住所、メールアドレス、電話番号、銀行・カード番号、API Key、パスワードなどをAI処理前に検出・除去し、安全化したデータだけをLLMへ送信する運用を支援します。</p>
+              <ul class="feature-tags">
+                <li>個人情報除去</li>
+                <li>秘密情報マスキング</li>
+                <li>安全化後データ送信</li>
+              </ul>
+            </div>
+            <div class="feature-visual">
+              <img src="assets/security-console.svg" alt="個人情報除去と安全化データ送信の管理画面">
+            </div>
+          </div>
+
+          <!-- Step 07 -->
+          <div class="feature-block">
+            <div class="feature-info">
+              <span class="step-num">07: Maintenance</span>
+              <h3>自動修復・改修プロセス</h3>
+              <p>不具合の修正や機能改修のタスクにおいて、改修前の既存コードと影響範囲を分析。修正箇所の特定、コード改修、テストコードの再作成・再実行、結果レポートまでをつなぎ、改修成果物をAI専用ブランチに保存します。</p>
+              <ul class="feature-tags">
+                <li>改修支援</li>
+                <li>既存影響分析</li>
+                <li>リグレッション防止</li>
+              </ul>
+            </div>
+            <div class="feature-visual">
+              <img src="assets/kaoooai-dashboard.png" alt="自己修復・エラー自動改修ログ画面">
+            </div>
+          </div>
+
+          <!-- Step 08 -->
+          <div class="feature-block reverse">
+            <div class="feature-info">
+              <span class="step-num">08: Optimization</span>
+              <h3>AI自己分析・改善提案</h3>
+              <p>日々の開発プロセスやテスト実行結果、エラー遭遇履歴、対抗AIによるレビュー時のフィードバックログを分析。AI自身の指示定義やコンテキスト（Skills/Prompts）の改善点をレポートとして提案します。</p>
+              <ul class="feature-tags">
+                <li>実行ログ分析</li>
+                <li>プロンプト改善提案</li>
+                <li>自律精度向上</li>
+              </ul>
+            </div>
+            <div class="feature-visual">
+              <img src="assets/kaoooai-dashboard.png" alt="プロンプト自己最適化レポート">
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>企業利用のための特長</h2>
+          <p>開発現場で継続利用するための制御、確認、運用設計です。</p>
+        </div>
+        <div class="feature-highlights">
+          <article>
+            <div>
+              <strong>Model Routing</strong>
+              <h3>タスクごとにAIを使い分ける</h3>
+            </div>
+            <p>計画、生成、レビューで適したAIエンジンを設定できます。</p>
+          </article>
+          <article>
+            <div>
+              <strong>Review AI</strong>
+              <h3>別AIがクロスレビューする</h3>
+            </div>
+            <p>正確性、不足点、保守性、性能、安全性を別観点で確認します。</p>
+          </article>
+          <article>
+            <div>
+              <strong>Human Approval</strong>
+              <h3>人が承認してから進める</h3>
+            </div>
+            <p>計画レポート、影響範囲、残リスクを確認してから実行します。</p>
+          </article>
+          <article>
+            <div>
+              <strong>Ground Truth</strong>
+              <h3>企業ルールをAIの判断基準へ</h3>
+            </div>
+            <p>開発規約、設計方針、レビュー基準を標準化ナレッジとして扱います。</p>
+          </article>
+          <article>
+            <div>
+              <strong>Support</strong>
+              <h3>AI専門人材がいなくても始めやすい</h3>
+            </div>
+            <p>PoC、設定、チューニング、利用支援をプロジェクトに合わせて行います。</p>
+          </article>
+          <article>
+            <div>
+              <strong>Local AI</strong>
+              <h3>閉域・オンプレミスも相談できる</h3>
+            </div>
+            <p>セキュリティ要件に応じた構成を検討できます。</p>
+          </article>
+        </div>
+        <div class="feature-cta">
+          <div>
+            <h2>自社の開発規約や既存コードで、どこまで使えるか確認しませんか</h2>
+            <p>代表的な機能、開発規約、テスト手順書をもとに、PoCで確認すべき範囲と評価指標を整理します。</p>
+          </div>
+          <div class="hero-actions">
+            <a class="button primary" href="contact.html?intent=demo">機能デモを相談する</a>
+            <a class="button" href="resources.html">資料を確認する</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Roadmap Section -->
+    <section class="section alt" id="planned" style="border-top: 1px solid var(--line);">
+      <div class="wrap" style="max-width: 800px; margin: 0 auto;">
+        <div class="section-head" style="display: flex; flex-direction: column; align-items: center; text-align: center; margin-bottom: 48px;">
+          <span class="eyebrow" style="display: block; margin-bottom: 8px; font-weight: 800; color: var(--blue);">Roadmap</span>
+          <h2 style="margin-top: 10px; font-size: clamp(24px, 3vw, 32px); color: var(--navy); font-weight: 800;">ロードマップ今後の対応領域</h2>
+          <p style="color: var(--muted); margin-top: 8px; max-width: 600px;">Kaoooaiの機能拡張計画。開発工程のさらなる自律化に向けた先進エージェントの研究開発を進めています。</p>
+        </div>
+        
+        <div class="roadmap-timeline" style="position: relative; padding-left: 32px; border-left: 2px solid #e2e8f0; display: grid; gap: 38px;">
+          <!-- Timeline Item 1 -->
+          <div class="timeline-item" style="position: relative;">
+            <div style="position: absolute; left: -41px; top: 4px; width: 16px; height: 16px; border-radius: 50%; background: var(--blue); border: 4px solid #fff; box-shadow: 0 0 0 2px var(--blue);"></div>
+            <span style="font-size: 12px; font-weight: 800; color: var(--blue); text-transform: uppercase; letter-spacing: 0.05em;">Phase 1: 上流工程の自律化支援</span>
+            <h3 style="margin: 8px 0 6px; font-size: 18px; color: var(--navy); font-weight: 800;">要件吸い上げ・基本設計支援Agent</h3>
+            <p style="margin: 0; color: var(--muted); font-size: 14.5px; line-height: 1.7;">
+              自然言語による対話、手元のポンチ絵、各種設計ドキュメントから開発の仕様意図を正確に読み取り、構造化した要件定義および基本設計書のドラフトを自動生成する上流工程エージェント。
+            </p>
+          </div>
+          
+          <!-- Timeline Item 2 -->
+          <div class="timeline-item" style="position: relative;">
+            <div style="position: absolute; left: -41px; top: 4px; width: 16px; height: 16px; border-radius: 50%; background: var(--blue); border: 4px solid #fff; box-shadow: 0 0 0 2px var(--blue);"></div>
+            <span style="font-size: 12px; font-weight: 800; color: var(--blue); text-transform: uppercase; letter-spacing: 0.05em;">Phase 2: 統合テストの自律化</span>
+            <h3 style="margin: 8px 0 6px; font-size: 18px; color: var(--navy); font-weight: 800;">連結テストシナリオ作成Agent</h3>
+            <p style="margin: 0; color: var(--muted); font-size: 14.5px; line-height: 1.7;">
+              API間の相互連携や非同期のメッセージング処理を含む、複数機能をまたぐ複雑な実務フローに対応したテスト設計と、自律的なシナリオ連携テストの実行を可能にします。
+            </p>
+          </div>
+          
+          <!-- Timeline Item 3 -->
+          <div class="timeline-item" style="position: relative;">
+            <div style="position: absolute; left: -41px; top: 4px; width: 16px; height: 16px; border-radius: 50%; background: var(--blue); border: 4px solid #fff; box-shadow: 0 0 0 2px var(--blue);"></div>
+            <span style="font-size: 12px; font-weight: 800; color: var(--blue); text-transform: uppercase; letter-spacing: 0.05em;">Phase 3: フロント/バックエンド対応拡大</span>
+            <h3 style="margin: 8px 0 6px; font-size: 18px; color: var(--navy); font-weight: 800;">React＆PHP 新規／改修Agent</h3>
+            <p style="margin: 0; color: var(--muted); font-size: 14.5px; line-height: 1.7;">
+              モダンなフロントエンド技術（React）および基盤バックエンド技術（PHP）をターゲットにした新規開発・改修プロセスの自律化対応を拡大します。
+            </p>
+          </div>
+
+          <!-- Timeline Item 4 -->
+          <div class="timeline-item" style="position: relative;">
+            <div style="position: absolute; left: -41px; top: 4px; width: 16px; height: 16px; border-radius: 50%; background: var(--blue); border: 4px solid #fff; box-shadow: 0 0 0 2px var(--blue);"></div>
+            <span style="font-size: 12px; font-weight: 800; color: var(--blue); text-transform: uppercase; letter-spacing: 0.05em;">Phase 4: レガシーマイグレーション</span>
+            <h3 style="margin: 8px 0 6px; font-size: 18px; color: var(--navy); font-weight: 800;">レガシーCobol解析＆改修Agent</h3>
+            <p style="margin: 0; color: var(--muted); font-size: 14.5px; line-height: 1.7;">
+              基幹システム（COBOL等）の既存レガシー資産を自動解析し、改修やモダンシステムへの安全な移行・改修計画の自動生成を支援します。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+            <footer class="site-footer">
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href="index.html"><img src="assets/brand-mark.svg" alt="">Kaoooai</a>
+        <p>AIエージェント主導の開発基盤。日本企業の開発標準化、品質保証、セキュリティ要件に対応します。</p>
+      </div>
+      <div class="footer-links">
+        <div>
+          <h3>プロダクト</h3>
+          <a href="about.html">Kaoooaiとは</a>
+          <a href="features.html">機能</a>
+          <a href="security.html">セキュリティ</a>
+          <a href="cases.html">導入事例</a>
+        </div>
+        <div>
+          <h3>リソース</h3>
+          <a href="articles.html">お役立ち情報</a>
+          <a href="docs.html">技術ドキュメント</a>
+          <a href="resources.html">資料・FAQ</a>
+          <a href="resources.html#faq">よくある質問 (FAQ)</a>
+          <a href="contact.html">お問い合わせ・デモ相談</a>
+        </div>
+        <div>
+          <h3>会社情報</h3>
+          <a href="https://www.istart.co.jp/about.html" target="_blank" rel="noopener">会社概要</a>
+          <a href="security.html">セキュリティ方針</a>
+          <a href="contact.html?intent=security">セキュリティ要件の相談</a>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">© 2026 Kaoooai. All rights reserved.<a href="sitemap.html">サイトマップ</a></div>
+  </footer>
+
+  <!-- Global Live Chat Widget -->
+  <button class="chat-launcher" type="button" aria-label="チャット相談を開く" data-chat-toggle>
+    <svg class="chat-icon" viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z"/></svg>
+    <span class="close-icon">×</span>
+  </button>
+  
+  <div class="chat-window" id="chat-window">
+    <div class="chat-header">
+      <div class="chat-avatar">AI</div>
+      <div class="chat-header-info">
+        <h3>Kaoooai 導入アシスタント</h3>
+        <p>内容に応じてご案内します</p>
+      </div>
+    </div>
+    <div class="chat-body" id="chat-body">
+      <div class="chat-msg bot">
+        はじめまして！Kaoooai（カオーアイ）導入サポートです。どのような情報をお探しですか？ご希望の内容を選択してください。
+      </div>
+      <div class="chat-options">
+        <button class="chat-opt-btn" type="button" data-chat-opt="material">サービス紹介資料をもらう</button>
+        <button class="chat-opt-btn" type="button" data-chat-opt="demo">画面デモ・PoCの日程調整</button>
+        <button class="chat-opt-btn" type="button" data-chat-opt="custom">直接メッセージを入力する</button>
+      </div>
+    </div>
+    <div class="chat-footer">
+      <input class="chat-input" type="text" placeholder="メッセージを入力してください..." aria-label="メッセージを入力" data-chat-input disabled>
+      <button class="chat-send-btn" type="button" data-chat-send disabled>送信</button>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

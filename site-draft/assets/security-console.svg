@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="540" viewBox="0 0 980 540" role="img" aria-labelledby="title">
+  <title id="title">Security and compliance console</title>
+  <rect width="980" height="540" rx="20" fill="#0b1f3a"/>
+  <g font-family="Inter, Arial, sans-serif">
+    <text x="56" y="76" font-size="28" font-weight="800" fill="#fff">Security Control</text>
+    <text x="56" y="112" font-size="15" fill="#b8c8dc">国内セキュア環境 / データ非学習 / RBAC / 監査ログ</text>
+    <rect x="56" y="156" width="250" height="258" rx="14" fill="#132c4d" stroke="#254668"/>
+    <text x="84" y="200" font-size="17" font-weight="800" fill="#fff">データ保護</text>
+    <text x="84" y="238" font-size="14" fill="#b8c8dc">入力データと生成成果物は</text>
+    <text x="84" y="264" font-size="14" fill="#b8c8dc">モデル学習に利用しません。</text>
+    <rect x="84" y="318" width="148" height="38" rx="8" fill="#1eb8a6"/>
+    <text x="112" y="342" font-size="14" font-weight="800" fill="#06231f">非学習設定</text>
+    <rect x="366" y="156" width="250" height="258" rx="14" fill="#132c4d" stroke="#254668"/>
+    <text x="394" y="200" font-size="17" font-weight="800" fill="#fff">権限管理</text>
+    <text x="394" y="238" font-size="14" fill="#b8c8dc">ロールごとに閲覧・承認・</text>
+    <text x="394" y="264" font-size="14" fill="#b8c8dc">実行権限を制御します。</text>
+    <rect x="394" y="314" width="60" height="28" rx="6" fill="#eaf2ff"/>
+    <text x="410" y="333" font-size="12" font-weight="800" fill="#1d5ee6">PM</text>
+    <rect x="466" y="314" width="60" height="28" rx="6" fill="#eaf9f6"/>
+    <text x="482" y="333" font-size="12" font-weight="800" fill="#117e73">SE</text>
+    <rect x="538" y="314" width="50" height="28" rx="6" fill="#fff4d8"/>
+    <text x="552" y="333" font-size="12" font-weight="800" fill="#8f6200">QA</text>
+    <rect x="676" y="156" width="248" height="258" rx="14" fill="#132c4d" stroke="#254668"/>
+    <text x="704" y="200" font-size="17" font-weight="800" fill="#fff">監査ログ</text>
+    <text x="704" y="238" font-size="14" fill="#b8c8dc">すべての操作履歴を記録し、</text>
+    <text x="704" y="264" font-size="14" fill="#b8c8dc">レビュー可能な状態を保ちます。</text>
+    <line x1="704" y1="316" x2="864" y2="316" stroke="#315273" stroke-width="10" stroke-linecap="round"/>
+    <line x1="704" y1="348" x2="838" y2="348" stroke="#315273" stroke-width="10" stroke-linecap="round"/>
+    <line x1="704" y1="380" x2="884" y2="380" stroke="#315273" stroke-width="10" stroke-linecap="round"/>
+  </g>
+</svg>
