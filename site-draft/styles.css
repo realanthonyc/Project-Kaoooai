@@ -1810,6 +1810,23 @@ img { max-width: 100%; display: block; }
   color: var(--muted);
 }
 
+.faq ul,
+.faq ol {
+  margin: 12px 0 0;
+  padding-left: 20px;
+  color: var(--muted);
+}
+
+.faq li {
+  margin-top: 6px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.faq li strong {
+  color: var(--navy);
+}
+
 .intent-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
