@@ -141,9 +141,9 @@ document.querySelectorAll(".reveal").forEach((element) => observer.observe(eleme
         messageField.placeholder = "現在の開発課題、対象システム、希望時期などをご記入ください。";
       }
     } else if (intent === "letter") {
-      if (syncSelect) selectTopic.value = "メールマガジンを購読したい";
+      if (syncSelect) selectTopic.value = "メルマガを購読したい";
       if (intentCards[2]) intentCards[2].classList.add("is-active");
-      if (pageTitleH1) pageTitleH1.textContent = "メールマガジン購読";
+      if (pageTitleH1) pageTitleH1.textContent = "メルマガ購読";
       if (pageTitleP) pageTitleP.textContent = "AIエージェントの動向、PoCの進め方、開発規約・品質レビュー標準化に関する情報をお届けします。";
       if (messageField) {
         messageField.placeholder = "知りたいテーマや、日頃の開発業務における課題などがあればご記入ください（任意）。";
@@ -191,7 +191,7 @@ document.querySelectorAll(".reveal").forEach((element) => observer.observe(eleme
       applyIntent("demo", false);
     } else if (val === "PoCを相談したい") {
       applyIntent("poc", false);
-    } else if (val === "メールマガジンを購読したい") {
+    } else if (val === "メルマガを購読したい") {
       applyIntent("letter", false);
     } else if (val === "セキュリティ要件を確認したい") {
       applyIntent("security", false);
