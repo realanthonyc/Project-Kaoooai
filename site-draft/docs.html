@@ -31,8 +31,8 @@
     </nav>
   </header>
   <main>
-    <section class="page-title"><div class="wrap"><h1>技術ドキュメント</h1><p>導入検討時に確認されやすい、設定・カスタマイズ・Local AI構成の考え方をまとめています。実際の設定値や対応範囲はPoC時に確認します。</p></div></section>
-    <section class="section"><div class="wrap docs-layout"><aside class="docs-sidebar"><h2>目次</h2><a href="#quickstart">クイックスタート</a><a href="#architecture">プラットフォーム構成</a><a href="#instructions">カスタムInstructions</a><a href="#skills">Skills拡張</a><a href="#local-ai">Local AI / オンプレミス</a></aside><article class="docs-content">
+    <section class="page-title"><div class="wrap"><h1>技術ドキュメント</h1><p>導入検討時に確認されやすい、設定・カスタマイズ・提供形態・Local AI構成の考え方をまとめています。実際の設定値や対応範囲はPoC時に確認します。</p></div></section>
+    <section class="section"><div class="wrap docs-layout"><aside class="docs-sidebar"><h2>目次</h2><a href="#quickstart">クイックスタート</a><a href="#architecture">プラットフォーム構成</a><a href="#instructions">カスタムInstructions</a><a href="#skills">Skills拡張</a><a href="#deployment">提供形態</a><a href="#local-ai">Local AI / オンプレミス</a></aside><article class="docs-content">
       <section id="quickstart"><h2>クイックスタート</h2><p>Kaoooaiは、プロジェクトごとの開発規約、設計書テンプレート、レビュー観点、テスト方針を参照しながら、AIエージェントが計画・生成・検証を進める設計です。</p><p>導入初期は、いきなり全社標準へ展開せず、代表機能や数モジュール規模のPoCから始めることを推奨します。</p><div class="code-block">project:
   name: sample-payment-api
   scope: detailed-design / code-generation / test-generation
@@ -51,6 +51,7 @@ approval:
     - security_risk
   require_report_before_execution: true</div></section>
       <section id="skills"><h2>Skills拡張</h2><p>Skillsは、特定の業務手順や社内ルールをAIエージェントが再利用できるようにする仕組みです。たとえば、社内テンプレートに沿った設計書生成、特定フレームワークのテスト作成、Gitブランチ運用ルールなどを定義できます。</p></section>
+      <section id="deployment"><h2>提供形態</h2><p>Kaoooaiは、クラウド型、Enterprise型、Local型の3つの提供形態を検討できます。導入スピード、データ管理、ネットワーク制約、監査要件に応じて構成を選び、PoC時に技術条件と運用条件を確認します。</p></section>
       <section id="local-ai"><h2>Local AI / オンプレミス</h2><p>セキュリティ要件が厳しい組織では、社内サーバーやオンプレミス環境でのLocal AI構築を検討できます。外部送信制限、GPU環境、利用モデル、監査ログ、権限管理の要件を確認したうえで、構成を設計します。</p><p>実際の構成は、お客様のネットワークポリシー、対象コード、性能要件により個別確認が必要です。</p></section>
     </article></div></section>
   </main>

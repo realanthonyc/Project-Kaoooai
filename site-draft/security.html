@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="robots" content="noindex, nofollow, noarchive, noai, noimageai, nosnippet, noydir, noimageindex">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>セキュリティ | Kaoooai</title>
-  <meta name="description" content="Kaoooaiのセキュリティとコンプライアンス。データ非学習、国内セキュア環境、RBAC、監査ログ、個人情報除去などの確認観点を整理します。">
+  <title>セキュリティ・提供形態 | Kaoooai</title>
+  <meta name="description" content="Kaoooaiのセキュリティ、コンプライアンス、提供形態。データ非学習、国内セキュア環境、RBAC、監査ログ、個人情報除去、クラウド型・Enterprise型・Local型を整理します。">
   <link rel="icon" href="assets/brand-mark.svg">
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -31,15 +31,16 @@
     </nav>
   </header>
   <main>
-    <section class="page-title"><div class="wrap"><h1>エンタープライズ利用を前提にしたセキュリティ設計</h1><p>生成AI活用と情報保護を両立するために、データ非学習、国内セキュア環境、権限管理、監査ログ、個人情報除去を重視しています。</p></div></section>
+    <section class="page-title"><div class="wrap"><h1>エンタープライズ利用を前提にしたセキュリティ設計</h1><p>生成AI活用と情報保護を両立するために、データ非学習、国内セキュア環境、権限管理、監査ログ、個人情報除去、提供形態の選択肢を重視しています。</p></div></section>
     <section class="section"><div class="wrap split"><div><h2>企業のGround Truthを守るパートナーとして</h2><p>仕様、ソースコード、設計思想、レビュー観点は、企業にとって重要な知的資産です。Kaoooaiは、AI開発の速度だけでなく、機密情報と内部統制を守る運用設計を前提にしています。</p><div class="workflow-list"><div class="workflow-item"><strong>01</strong><div><h3>データの非学習</h3><p>お客様の入力データや生成成果物を、AIモデルの再学習に利用しない運用を前提にします。</p></div></div><div class="workflow-item"><strong>02</strong><div><h3>国内セキュア環境</h3><p>要件に応じて国内インフラ、専用環境、閉域・Local AI構成を含めて検討します。</p></div></div><div class="workflow-item"><strong>03</strong><div><h3>権限管理・ログ</h3><p>RBACによる権限設定と、操作履歴を記録する監査ログに対応します。</p></div></div></div></div><div class="media-frame reveal"><img src="assets/security-console.svg" alt="Kaoooaiのセキュリティ管理画面"></div></div></section>
     <section class="section alt"><div class="wrap"><div class="section-head"><h2>個人情報・秘密情報をAI処理前に除去</h2><p>Privacy AIにより、安全化後データのみをLLMへ送信。名前、住所、Email、電話番号、銀行・カード番号、API Key、パスワードなどを対象にできます。</p></div><div class="feature-grid"><article class="card"><h3>漏洩リスク低減</h3><p>個人情報・秘密情報をAI処理前に除去し、安全な活用環境を実現します。</p></article><article class="card"><h3>ガバナンス強化</h3><p>権限、ログ、承認フローを組み合わせ、利用状況を管理します。</p></article><article class="card"><h3>Local AI対応</h3><p>オンプレミスや社内サーバーでのLocal AI環境構築にも対応可能です。</p></article></div></div></section>
-    <section class="section">
+    <section class="section" id="deployment">
       <div class="wrap">
         <div class="section-head" style="margin-bottom: 48px;">
-          <h2>クラウド型 / Enterprise型 / Local型を選択可能</h2>
-          <p>利用環境やセキュリティ要件に応じて、3つの提供形態から最適な構成を検討できます。閉域環境や社内サーバー利用を含む場合は、PoC時に技術条件を確認します。</p>
+          <h2>セキュリティ要件に合わせて選べる、3つの提供形態</h2>
+          <p>Kaoooaiは、プロジェクト単位・組織単位のセキュリティ要件に合わせて、クラウド型、Enterprise型、Local型から構成を選べます。開発者はKaoooaiのAI支援を使いながら、データの置き場所、ネットワーク接続、認証・権限管理の方針を柔軟に調整できます。</p>
         </div>
+        <p class="deployment-lead">クラウドで素早く検証し、本番化・高機密プロジェクトでは企業内サーバーやローカル環境へ。導入段階と情報管理レベルに合わせて、AI活用の範囲を無理なく広げられます。</p>
         <div class="provision-container">
           <!-- Cloud Provision Card -->
           <article class="provision-card">
@@ -48,8 +49,13 @@
                 <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path>
               </svg>
             </div>
-            <h3>クラウド型</h3>
-            <p>Kaoooaiクラウドにセキュアに接続し、AI機能を即座に利用する最もシンプルな構成です。短期間でのセットアップが可能で、すぐに導入検証を開始できます。</p>
+            <h3>クラウド型（Kaoooaiサーバー）</h3>
+            <p>開発者PCからインターネット経由でKaoooaiクラウドへ接続し、AI機能を利用する最もシンプルな構成です。短期間でPoCや初期検証を始めやすい提供形態です。</p>
+            <ul class="provision-detail-list">
+              <li><strong>AIモデル</strong><span>高度なAI機能</span></li>
+              <li><strong>ナレッジベース</strong><span>知識・学習データ</span></li>
+              <li><strong>セキュリティ</strong><span>安全な運用管理</span></li>
+            </ul>
           </article>
           
           <!-- Enterprise Provision Card -->
@@ -64,8 +70,15 @@
                 <line x1="20" y1="18" x2="20" y2="18"></line>
               </svg>
             </div>
-            <h3>Enterprise型</h3>
-            <p>貴社独自のプライベートクラウド（VPC環境）やオンプレミスサーバーにKaoooai SDKを構築し、安全な内部ネットワーク内からAI機能を稼働させる構成です。</p>
+            <h3>Enterprise型（企業側サーバー）</h3>
+            <p>企業内部ネットワーク内の社内サーバーにKaoooai SDKを構築し、開発者PCから社内ネットワーク経由で利用する構成です。社内の認証・権限管理やソースコード管理と連携しやすくなります。</p>
+            <ul class="provision-detail-list">
+              <li><strong>Kaoooai SDK</strong><span>企業内サーバー</span></li>
+              <li><strong>社内LLM</strong><span>オンプレモデル</span></li>
+              <li><strong>社内ナレッジ</strong><span>社内ドキュメント等</span></li>
+              <li><strong>社内Git / SCM</strong><span>ソースコード連携</span></li>
+              <li><strong>セキュリティ基盤</strong><span>認証・権限管理</span></li>
+            </ul>
           </article>
           
           <!-- Local Provision Card -->
@@ -84,10 +97,18 @@
                 <line x1="1" y1="15" x2="4" y2="15"></line>
               </svg>
             </div>
-            <h3>Local型</h3>
-            <p>各開発用のPCや閉域ローカル環境内にAIモデルおよびSDKを構築し、外部通信を制限した隔離構成を検討できます。</p>
+            <h3>Local型（個人PCサーバー）</h3>
+            <p>個人PCまたは閉域ローカル環境内にKaoooai SDKを構築し、インターネット接続を前提にせずAI機能を利用する構成です。ローカルモデル、ローカルデータ、対象プロジェクトをPC内で扱います。</p>
+            <ul class="provision-detail-list">
+              <li><strong>Kaoooai SDK</strong><span>ローカルサーバー</span></li>
+              <li><strong>Local LLM</strong><span>ローカルモデル</span></li>
+              <li><strong>ナレッジ</strong><span>ローカルデータ</span></li>
+              <li><strong>プロジェクト</strong><span>ソースコード等</span></li>
+              <li><strong>セキュリティ</strong><span>PC内で完結</span></li>
+            </ul>
           </article>
         </div>
+        <p class="deployment-note">いずれの提供形態でも、データ非学習、RBAC、監査ログ、個人情報除去、Ground Truth保護の観点を確認しながら設計します。PoC時に、対象システム、利用データ、接続条件、運用体制を確認します。</p>
       </div>
     </section>
   </main>
