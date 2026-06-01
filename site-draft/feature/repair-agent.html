@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex, nofollow, noarchive, noai, noimageai, nosnippet, noydir, noimageindex">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>改修Agent | Kaoooai</title>
+  <meta name="description" content="Kaoooaiの改修Agent。既存コード調査、影響分析、改修レポート、ベースラインテスト、コード改修、テスト実行、結果レポート、レビュー、Git保存までを支援します。">
+  <link rel="icon" href="../assets/brand-mark.svg">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="グローバルナビゲーション">
+      <a class="brand" href="../index.html"><img src="../assets/brand-mark.svg" alt="">Kaoooai</a>
+      <div class="nav-links">
+        <a href="../about.html">Kaoooaiとは</a>
+        <a href="../features.html">機能</a>
+        <a href="../effect.html">導入効果</a>
+        <a href="../security.html">セキュリティ</a>
+        <a href="../flow.html">導入の流れ</a>
+        <a href="../cases.html">事例</a>
+        <a href="../articles.html">お役立ち情報</a>
+        <a href="../resources.html">資料・FAQ</a>
+      </div>
+      <div class="nav-actions">
+        <a class="button text" href="../contact.html?intent=material">資料請求</a>
+        <a class="button primary" href="../contact.html?intent=demo">デモ相談</a>
+      </div>
+      <button class="menu-toggle" type="button" aria-label="メニューを開く" aria-expanded="false">☰</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="feature-detail-hero">
+      <div class="wrap feature-detail-hero-centered">
+        <nav class="breadcrumb" aria-label="ブレッドクラム">
+          <a href="../index.html">ホーム</a>
+          <span class="separator" aria-hidden="true">/</span>
+          <a href="../features.html">主要機能・プロセス</a>
+          <span class="separator" aria-hidden="true">/</span>
+          <span class="current" aria-current="page">改修Agent</span>
+        </nav>
+
+        <h1>改修Agent</h1>
+        <p>Bug対応や追加対応において、入力内容と既存コードを調査し、影響範囲、改修方針、テスト計画、残リスクを整理します。改修前後のテストとレビューを挟みながら、既存機能への影響を確認できる形で変更を進めます。</p>
+
+        <div class="feature-process-line" aria-label="改修Agentの実行プロセス">
+          <article>
+            <span>Input</span>
+            <h3>詳細設計・既存コード</h3>
+            <p>修正依頼、詳細設計ドキュメント、既存ソースコードを読み込みます。</p>
+          </article>
+          <article>
+            <span>Analyze</span>
+            <h3>入力分析・影響分析</h3>
+            <p>関連機能、依存関係、修正リスクを確認します。</p>
+          </article>
+          <article>
+            <span>Plan</span>
+            <h3>改修レポート作成</h3>
+            <p>改修方針、対応内容、事前ベースラインテストを整理します。</p>
+          </article>
+          <article>
+            <span>Execute</span>
+            <h3>コード改修・テスト</h3>
+            <p>修正・追加実装、テスト作成、テスト実行を進めます。</p>
+          </article>
+          <article>
+            <span>Output</span>
+            <h3>結果レポート・Git保存</h3>
+            <p>テスト結果、レビュー観点、未実施または残リスクを残します。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>既存システムの変更リスクを見える化する</h2>
+          <p>改修で重要なのは、コードを書き換えることだけではありません。どこに影響するか、改修前の状態は正常か、改修後に何を確認したかを残すことで、チームが判断できる状態をつくります。</p>
+        </div>
+        <div class="feature-detail-grid">
+          <article>
+            <span>OUTPUT 01</span>
+            <h3>改修レポート作成</h3>
+            <p>入力内容と既存コードを調査し、影響範囲、改修方針、対応内容を整理します。レビューや承認に使える判断材料を先に作ります。</p>
+          </article>
+          <article>
+            <span>OUTPUT 02</span>
+            <h3>ソースコード改修</h3>
+            <p>詳細設計や企業ルールに基づき、既存コードへの修正・追加実装を行います。変更内容は差分確認しやすい形で扱います。</p>
+          </article>
+          <article>
+            <span>OUTPUT 03</span>
+            <h3>テスト作成・実行結果出力</h3>
+            <p>改修内容に応じたテストを作成・実行し、成功／失敗と改善対象をレポート化します。改修後の説明責任を支えます。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>改修前後の確認を、プロセスに組み込む</h2>
+          <p>属人的な「たぶん大丈夫」ではなく、事前分析、ベースライン確認、改修後テストを通じて、既存機能への影響と変更内容の妥当性を確認します。</p>
+        </div>
+        <div class="feature-detail-grid">
+          <article>
+            <span>QA 01</span>
+            <h3>影響範囲の事前分析</h3>
+            <p>既存コードを調査し、関連機能、依存関係、修正リスクを確認します。確認すべき範囲を改修前に明確にします。</p>
+          </article>
+          <article>
+            <span>QA 02</span>
+            <h3>ベースラインテスト確認</h3>
+            <p>改修前に既存テストを実行し、現状動作を確認した上で改修します。既存不具合と改修影響を混同しにくくします。</p>
+          </article>
+          <article>
+            <span>QA 03</span>
+            <h3>改修後テストによる検証</h3>
+            <p>改修後にテストを再実行し、既存機能への影響と改修内容の妥当性を確認します。レビューとGit保存までつなげます。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="cta-band">
+          <div>
+            <h2>既存システムの改修対象で、影響分析から検証しませんか</h2>
+            <p>代表的な修正依頼、既存ソースコード、テスト資産、レビュー基準をもとに、PoCで確認すべき改修フローと評価指標を整理します。</p>
+          </div>
+          <a class="button accent" href="../contact.html?intent=poc">PoCを相談する</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href="../index.html"><img src="../assets/brand-mark.svg" alt="">Kaoooai</a>
+        <p>AIエージェント主導の開発基盤。日本企業の開発標準化、品質保証、セキュリティ要件に対応します。</p>
+      </div>
+      <div class="footer-links">
+        <div>
+          <h3>プロダクト</h3>
+          <a href="../about.html">Kaoooaiとは</a>
+          <a href="../features.html">機能</a>
+          <a href="../security.html">セキュリティ</a>
+          <a href="../cases.html">導入事例</a>
+        </div>
+        <div>
+          <h3>リソース</h3>
+          <a href="../articles.html">お役立ち情報</a>
+          <a href="../docs.html">技術ドキュメント</a>
+          <a href="../resources.html">資料・FAQ</a>
+          <a href="../resources.html#faq">よくある質問 (FAQ)</a>
+          <a href="../contact.html">お問い合わせ・デモ相談</a>
+        </div>
+        <div>
+          <h3>会社情報</h3>
+          <a href="https://www.istart.co.jp/about.html" target="_blank" rel="noopener">会社概要</a>
+          <a href="../security.html">セキュリティ方針</a>
+          <a href="../contact.html?intent=security">セキュリティ要件の相談</a>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">© 2026 Kaoooai. All rights reserved.<a href="../sitemap.html">サイトマップ</a></div>
+  </footer>
+
+  <button class="chat-launcher" type="button" aria-label="チャット相談を開く" data-chat-toggle>
+    <svg class="chat-icon" viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z"/></svg>
+    <span class="close-icon">×</span>
+  </button>
+
+  <div class="chat-window" id="chat-window">
+    <div class="chat-header">
+      <div class="chat-avatar">AI</div>
+      <div class="chat-header-info">
+        <h3>Kaoooai 導入アシスタント</h3>
+        <p>内容に応じてご案内します</p>
+      </div>
+    </div>
+    <div class="chat-body" id="chat-body">
+      <div class="chat-msg bot">
+        はじめまして！Kaoooai（カオーアイ）導入サポートです。どのような情報をお探しですか？ご希望の内容を選択してください。
+      </div>
+      <div class="chat-options">
+        <button class="chat-opt-btn" type="button" data-chat-opt="material">サービス紹介資料をもらう</button>
+        <button class="chat-opt-btn" type="button" data-chat-opt="demo">画面デモ・PoCの日程調整</button>
+        <button class="chat-opt-btn" type="button" data-chat-opt="custom">直接メッセージを入力する</button>
+      </div>
+    </div>
+    <div class="chat-footer">
+      <input class="chat-input" type="text" placeholder="メッセージを入力してください..." aria-label="メッセージを入力" data-chat-input disabled>
+      <button class="chat-send-btn" type="button" data-chat-send disabled>送信</button>
+    </div>
+  </div>
+  <script src="../app.js"></script>
+</body>
+</html>
