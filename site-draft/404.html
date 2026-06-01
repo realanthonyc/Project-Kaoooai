@@ -7,6 +7,23 @@
   <meta charset="utf-8">
   <meta name="robots" content="noindex, nofollow, noarchive, noai, noimageai, nosnippet, noydir, noimageindex">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    // Dynamically set the <base> tag to support GitHub Pages custom subfolder routing
+    (function() {
+      if (window.location.protocol === 'file:') return;
+      var base = document.createElement('base');
+      if (window.location.hostname.indexOf('github.io') !== -1) {
+        base.href = '/Project-Kaoooai/';
+      } else {
+        if (window.location.pathname.indexOf('/site-draft/') !== -1) {
+          base.href = window.location.origin + '/site-draft/';
+        } else {
+          base.href = window.location.origin + '/';
+        }
+      }
+      document.head.appendChild(base);
+    })();
+  </script>
   <title>ページが見つかりません | Kaoooai</title>
   <meta name="description" content="お探しのページは見つかりませんでした。アドレスをご確認いただくか、ホームにお戻りください。">
   <link rel="icon" href="assets/brand-mark.svg">
