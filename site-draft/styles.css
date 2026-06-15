@@ -125,9 +125,9 @@ img { max-width: 100%; display: block; }
 }
 
 .button.accent {
-  background: var(--teal);
-  color: #06231f;
-  border-color: var(--teal);
+  background: var(--navy);
+  color: #fff;
+  border-color: var(--navy);
 }
 
 .button.text {
