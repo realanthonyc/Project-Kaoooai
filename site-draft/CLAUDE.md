@@ -37,7 +37,6 @@ Pure static marketing site for Kaoooai, a Japan-focused enterprise AI agent soft
     ├── kaoooai-product.svg
     ├── security-console.svg
     ├── workflow-map.svg
-    ├── kaoooai-dashboard.jpeg
     ├── developer-team.png
     ├── case-sier-team.png
     ├── case-qa-team.png
