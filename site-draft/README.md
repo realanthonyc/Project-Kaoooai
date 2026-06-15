@@ -1,6 +1,4 @@
-# Kaoooai product website
-
-Static multi-page website for the Japan local B2B market.
+# Kaoooai - Website Web-based Wireframe
 
 ## Pages
 
@@ -23,5 +21,3 @@ Static multi-page website for the Japan local B2B market.
 - `contact.html` - demo / PoC consultation form
 - `sitemap.html` - review sitemap
 - `sitemap.txt` - plain text version of the sitemap
-
-Open `index.html` directly in a browser, or run a local static server from this folder.
