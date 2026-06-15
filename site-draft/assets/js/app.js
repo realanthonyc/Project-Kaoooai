@@ -46,14 +46,26 @@ document.querySelectorAll("[data-demo-form]").forEach((form) => {
     try {
       const formData = new FormData(form);
       const data = Object.fromEntries(formData.entries());
+      console.log("送信データ:", JSON.stringify(data, null, 2));
 
-      const response = await fetch("https://script.google.com/macros/s/AKfycbxWNpgk5MiijSph_3PniTPczn12MqMmmaokz_uHHjhAN9sBwXxCbPkONTSbbhrSMarqdA/exec", {
+      const response = await fetch("https://script.google.com/macros/s/AKfycbySx7sz50HrzKVwjqOkf6XSkePXUVoITvWnCA_8Hr7dP8X4rxMzeGOfz_v2ernzgd9b/exec", {
         method: "POST",
         headers: { "Content-Type": "text/plain;charset=utf-8" },
         body: JSON.stringify(data),
       });
 
-      const json = await response.json();
+      console.log("レスポンスステータス:", response.status, response.statusText);
+
+      // 先获取原始文本，便于调试
+      const rawText = await response.text();
+      console.log("レスポンス生テキスト:", rawText);
+
+      let json;
+      try {
+        json = JSON.parse(rawText);
+      } catch (parseErr) {
+        throw new Error("JSONのパースに失敗: " + rawText.substring(0, 200));
+      }
 
       if (json.result === "success") {
         showFormToast("送信が完了しました。担当者より1営業日以内にご連絡します。");
@@ -65,9 +77,12 @@ document.querySelectorAll("[data-demo-form]").forEach((form) => {
         // reset intent card active state
         document.querySelectorAll(".intent-card").forEach(c => c.classList.remove("is-active"));
       } else {
-        throw new Error(json.message || "送信に失敗しました");
+        const errMsg = json.error || json.message || "送信に失敗しました";
+        console.error("GASエラー:", errMsg);
+        throw new Error(errMsg);
       }
     } catch (err) {
+      console.error("送信例外:", err);
       showFormToast("送信に失敗しました。時間をおいて再度お試しください。", true);
       if (resultEl) {
         resultEl.textContent = "送信に失敗しました。時間をおいて再度お試しください。";
