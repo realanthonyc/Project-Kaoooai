@@ -46,41 +46,27 @@ document.querySelectorAll("[data-demo-form]").forEach((form) => {
     try {
       const formData = new FormData(form);
       const data = Object.fromEntries(formData.entries());
-      console.log("送信データ:", JSON.stringify(data, null, 2));
+      // console.log("送信データ:", JSON.stringify(data, null, 2));
 
-      const response = await fetch("https://script.google.com/macros/s/AKfycbySx7sz50HrzKVwjqOkf6XSkePXUVoITvWnCA_8Hr7dP8X4rxMzeGOfz_v2ernzgd9b/exec", {
+      // GAS の /exec は CORS レスポンスヘッダーを返せないため、
+      // no-cors モードで送信する。これにより response は opaque になり
+      // 本文・ステータスは読めないが、リクエスト自体は GAS に届く。
+      await fetch("https://script.google.com/macros/s/AKfycbxn8Kf-gEsIX8Mb2a3yFEDhKncg3qSfD_sOchwR5cs2aqN5kOl6oHKiTp2MmeEIu2W83w/exec", {
         method: "POST",
+        mode: "no-cors",
         headers: { "Content-Type": "text/plain;charset=utf-8" },
         body: JSON.stringify(data),
       });
 
-      console.log("レスポンスステータス:", response.status, response.statusText);
-
-      // 先获取原始文本，便于调试
-      const rawText = await response.text();
-      console.log("レスポンス生テキスト:", rawText);
-
-      let json;
-      try {
-        json = JSON.parse(rawText);
-      } catch (parseErr) {
-        throw new Error("JSONのパースに失敗: " + rawText.substring(0, 200));
+      // no-cors では成否を判定できないため、送信完了として扱う。
+      showFormToast("送信が完了しました。担当者より1営業日以内にご連絡します。");
+      if (resultEl) {
+        resultEl.textContent = "送信ありがとうございます。担当者より1営業日以内にご連絡します。";
+        resultEl.style.color = "#117e73";
       }
-
-      if (json.result === "success") {
-        showFormToast("送信が完了しました。担当者より1営業日以内にご連絡します。");
-        if (resultEl) {
-          resultEl.textContent = "送信ありがとうございます。担当者より1営業日以内にご連絡します。";
-          resultEl.style.color = "#117e73";
-        }
-        form.reset();
-        // reset intent card active state
-        document.querySelectorAll(".intent-card").forEach(c => c.classList.remove("is-active"));
-      } else {
-        const errMsg = json.error || json.message || "送信に失敗しました";
-        console.error("GASエラー:", errMsg);
-        throw new Error(errMsg);
-      }
+      form.reset();
+      // reset intent card active state
+      document.querySelectorAll(".intent-card").forEach(c => c.classList.remove("is-active"));
     } catch (err) {
       console.error("送信例外:", err);
       showFormToast("送信に失敗しました。時間をおいて再度お試しください。", true);
