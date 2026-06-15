@@ -55,46 +55,37 @@
             
             <!-- Title & Subtitle Block on the top of the box -->
             <div class="platform-header-block">
-              <h3 class="platform-title">Kaoooai コード解析プラットフォーム</h3>
-              <p class="platform-subtitle">既存コードと依存関係を解析し、影響調査、改修範囲の判断、テスト対象の整理に利用します。</p>
+              <h3 class="platform-title">Kaoooai イメージ</h3>
             </div>
             
             <div class="platform-grid-layout">
-              <!-- Left Column: Code Analysis Platform (Directly on blue bg, no boxes) -->
+              <!-- Left Column: Code Analysis Platform & Knowledge DB -->
               <div class="platform-column-left">
-                <!-- Database Analysis Segment -->
-                <div class="direct-analysis-item">
-                  <div class="direct-visual-icon" title="コードデータベース解析">
+                <div class="direct-section-box">
+                  <div class="direct-text-info">
+                    <h4>コード解析プラットフォーム</h4>
+                    <p>既存コードと依存関係を解析し、影響調査、改修範囲の判断、テスト対象の整理に利用し、構造的なコード検索を可能にします。</p>
+                  </div>
+                  <div class="direct-icon-bottom">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="direct-svg">
                       <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
                       <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
                       <path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"></path>
                     </svg>
                   </div>
-                  <div class="direct-text-info">
-                    <h4>コードデータベース解析</h4>
-                    <p>既存リポジトリの全コードをインデックス化し、<br>構造的なコード検索を可能にします。</p>
-                  </div>
                 </div>
-                
-                <!-- Dependency Mapping Segment -->
-                <div class="direct-analysis-item">
-                  <div class="direct-visual-icon" title="システム依存関係マッピング">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="direct-svg">
-                      <circle cx="12" cy="12" r="3"></circle>
-                      <circle cx="19" cy="5" r="3"></circle>
-                      <circle cx="5" cy="19" r="3"></circle>
-                      <circle cx="19" cy="19" r="3"></circle>
-                      <circle cx="5" cy="5" r="3"></circle>
-                      <line x1="17" y1="7" x2="14" y2="10"></line>
-                      <line x1="7" y1="17" x2="10" y2="14"></line>
-                      <line x1="17" y1="17" x2="14" y2="14"></line>
-                      <line x1="7" y1="7" x2="10" y2="10"></line>
-                    </svg>
-                  </div>
+
+                <div class="direct-section-box">
                   <div class="direct-text-info">
-                    <h4>システム依存関係マッピング</h4>
-                    <p>モジュールや関数間の依存関係を自動生成し、<br>影響調査と改修範囲を自動で判定します。</p>
+                    <h4>ナレッジDB（RAG）</h4>
+                    <p>業務データ、設計書などをナレッジDBに保存、影響調査と改修範囲やレビューに利用します。</p>
+                  </div>
+                  <div class="direct-icon-bottom">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="direct-svg">
+                      <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                      <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                      <path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"></path>
+                    </svg>
                   </div>
                 </div>
               </div>
@@ -226,19 +217,19 @@
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="llm-svg">
                       <circle cx="12" cy="12" r="4"/><circle cx="12" cy="4" r="2"/><circle cx="12" cy="20" r="2"/><circle cx="4" cy="12" r="2"/><circle cx="20" cy="12" r="2"/><path d="M12 6v2M12 16v2M6 12h2M16 12h2"/>
                     </svg>
-                    <span class="llm-name">GPT系</span>
+                    <span class="llm-name">GPT</span>
                   </div>
                   <div class="llm-prov-card" title="Anthropic Claude Model">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="llm-svg">
                       <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
                     </svg>
-                    <span class="llm-name">Claude系</span>
+                    <span class="llm-name">Claude</span>
                   </div>
                   <div class="llm-prov-card" title="Google Gemini Model">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="llm-svg">
                       <path d="M12 2c0 5.523 4.477 10 10 10c-5.523 0-10 4.477-10 10c0-5.523-4.477-10-10-10c5.523 0 10-4.477 10-10z"/>
                     </svg>
-                    <span class="llm-name">Gemini系</span>
+                    <span class="llm-name">Gemini</span>
                   </div>
                 </div>
               </div>
@@ -298,7 +289,7 @@
               </ul>
             </div>
             <div class="feature-visual">
-              <img src="assets/kaoooai-dashboard.jpeg" alt="コード解析と影響調査ダッシュボード">
+              <img src="assets/features/research.png" alt="コード解析と影響調査ダッシュボード">
             </div>
           </div>
 
@@ -315,7 +306,7 @@
               </ul>
             </div>
             <div class="feature-visual">
-              <img src="assets/kaoooai-dashboard.jpeg" alt="詳細設計書生成画面">
+              <img src="assets/features/docs.png" alt="詳細設計書生成画面">
             </div>
           </div>
 
@@ -332,7 +323,7 @@
               </ul>
             </div>
             <div class="feature-visual">
-              <img src="assets/kaoooai-dashboard.jpeg" alt="ソースコード生成ダッシュボード">
+              <img src="assets/features/code.png" alt="ソースコード生成ダッシュボード">
             </div>
           </div>
 
@@ -349,7 +340,7 @@
               </ul>
             </div>
             <div class="feature-visual">
-              <img src="assets/kaoooai-dashboard.jpeg" alt="テスト自動生成と実行結果画面">
+              <img src="assets/features/test.png" alt="テスト自動生成と実行結果画面">
             </div>
           </div>
 
@@ -368,7 +359,7 @@
               <p class="feature-more-link"><a class="button feature-more-button" href="feature/e2e-testing.html">詳細を見る →</a></p>
             </div>
             <div class="feature-visual">
-              <img src="assets/kaoooai-dashboard.jpeg" alt="E2Eブラウザ自律テスト画面">
+              <img src="assets/features/e2e.png" alt="E2Eブラウザ自律テスト画面">
             </div>
           </div>
 
@@ -385,7 +376,7 @@
               </ul>
             </div>
             <div class="feature-visual">
-              <img src="assets/kaoooai-dashboard.jpeg" alt="個人情報除去と安全化データ送信の管理画面">
+              <img src="assets/features/privacy.png" alt="個人情報除去と安全化データ送信の管理画面">
             </div>
           </div>
 
@@ -393,7 +384,7 @@
           <div class="feature-block">
             <div class="feature-info">
               <span class="step-num">07: Maintenance</span>
-              <h3>自動修復・改修プロセス</h3>
+              <h3>改修</h3>
               <p>不具合の修正や機能改修のタスクにおいて、改修前の既存コードと影響範囲を分析。修正箇所の特定、コード改修、テストコードの再作成・再実行、結果レポートまでをつなぎ、改修成果物をAI専用ブランチに保存します。</p>
               <ul class="feature-tags">
                 <li>改修支援</li>
@@ -403,26 +394,11 @@
               <p class="feature-more-link"><a class="button feature-more-button" href="feature/repair-agent.html">詳細を見る →</a></p>
             </div>
             <div class="feature-visual">
-              <img src="assets/kaoooai-dashboard.jpeg" alt="自己修復・エラー自動改修ログ画面">
+              <img src="assets/features/fix.png" alt="自己修復・エラー自動改修ログ画面">
             </div>
           </div>
 
-          <!-- Step 08 -->
-          <div class="feature-block reverse">
-            <div class="feature-info">
-              <span class="step-num">08: Optimization</span>
-              <h3>AI自己分析・改善提案</h3>
-              <p>日々の開発プロセスやテスト実行結果、エラー遭遇履歴、対抗AIによるレビュー時のフィードバックログを分析。AI自身の指示定義やコンテキスト（Skills/Prompts）の改善点をレポートとして提案します。</p>
-              <ul class="feature-tags">
-                <li>実行ログ分析</li>
-                <li>プロンプト改善提案</li>
-                <li>自律精度向上</li>
-              </ul>
-            </div>
-            <div class="feature-visual">
-              <img src="assets/kaoooai-dashboard.jpeg" alt="プロンプト自己最適化レポート">
-            </div>
-          </div>
+
         </div>
 
       </div>

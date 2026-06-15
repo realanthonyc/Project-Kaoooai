@@ -544,17 +544,38 @@ img { max-width: 100%; display: block; }
 .platform-column-left {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: 24px;
+  gap: 16px;
   height: 100%;
+}
+
+.direct-section-box {
+  flex: 1;
+  background: #ffffff;
+  border-radius: 4px;
+  padding: 16px 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+}
+
+.direct-icon-bottom {
+  margin-top: auto;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.direct-icon-bottom .direct-svg {
+  width: 20px;
+  height: 20px;
+  color: var(--muted);
 }
 
 .direct-analysis-item {
   display: flex;
   gap: 16px;
   align-items: flex-start;
-  padding: 10px 0;
   transition: transform 0.2s ease;
+  width: 100%;
 }
 
 .direct-analysis-item:hover {
@@ -562,29 +583,29 @@ img { max-width: 100%; display: block; }
 }
 
 .direct-visual-icon {
-  width: 48px;
-  height: 48px;
+  width: 34px;
+  height: 34px;
   border-radius: 4px;
-  background: rgba(255, 255, 255, 0.12);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: #f0f4f8;
+  border: 1px solid #cfe0ee;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  color: #fff;
+  color: var(--navy);
   transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
 }
 
 .direct-analysis-item:hover .direct-visual-icon {
   transform: scale(1.08);
-  background: rgba(255, 255, 255, 0.22);
-  border-color: rgba(255, 255, 255, 0.4);
+  background: #e0e8f0;
+  border-color: var(--blue);
 }
 
 .direct-svg {
-  width: 24px;
-  height: 24px;
-  color: #fff;
+  width: 18px;
+  height: 18px;
+  color: var(--navy);
   stroke-width: 2.2px;
 }
 
@@ -597,14 +618,14 @@ img { max-width: 100%; display: block; }
   margin: 0 0 4px;
   font-size: 15px;
   font-weight: 800;
-  color: #fff;
+  color: var(--navy);
 }
 
 .direct-text-info p {
   margin: 0;
   font-size: 13px;
   line-height: 1.5;
-  color: rgba(255, 255, 255, 0.85);
+  color: var(--ink);
 }
 
 .platform-column-right {
