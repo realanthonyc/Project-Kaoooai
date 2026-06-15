@@ -477,20 +477,50 @@
         </div>
         
         <div class="roadmap-timeline" style="position: relative; padding-left: 32px; border-left: 2px solid #e2e8f0; display: grid; gap: 38px;">
+
           <!-- Timeline Item 1 -->
           <div class="timeline-item" style="position: relative;">
             <div style="position: absolute; left: -41px; top: 4px; width: 16px; height: 16px; border-radius: 50%; background: var(--blue); border: 4px solid #fff; box-shadow: 0 0 0 2px var(--blue);"></div>
-            <span style="font-size: 12px; font-weight: 800; color: var(--blue); text-transform: uppercase; letter-spacing: 0.05em;">Phase 1: 上流工程の自律化支援</span>
+            <span style="font-size: 12px; font-weight: 800; color: var(--blue); text-transform: uppercase; letter-spacing: 0.05em;">No 1: Python</span>
+            <h3 style="margin: 8px 0 6px; font-size: 18px; color: var(--navy); font-weight: 800;">Python(FastAPI)Agent<span style="color: red; font-size: 18px;">(作成済み)</span></h3>
+            <p style="margin: 0; color: var(--muted); font-size: 14.5px; line-height: 1.7;">
+              解析、新規/改修計画作成、FastAPIコード生成、コードレビュー、テストの実行、Git保存します。
+            </p>
+          </div>
+
+          <!-- Timeline Item 2 -->
+          <div class="timeline-item" style="position: relative;">
+            <div style="position: absolute; left: -41px; top: 4px; width: 16px; height: 16px; border-radius: 50%; background: var(--blue); border: 4px solid #fff; box-shadow: 0 0 0 2px var(--blue);"></div>
+            <span style="font-size: 12px; font-weight: 800; color: var(--blue); text-transform: uppercase; letter-spacing: 0.05em;">No 2: レガシーマイグレーション</span>
+            <h3 style="margin: 8px 0 6px; font-size: 18px; color: var(--navy); font-weight: 800;">レガシーCobol解析＆改修Agent<span style="color: red; font-size: 18px;">(作成済み)</span></h3>
+            <p style="margin: 0; color: var(--muted); font-size: 14.5px; line-height: 1.7;">
+              基幹システム（COBOL等）の既存レガシー資産について、解析、改修計画、モダナイゼーション支援の可能性を検証します。
+            </p>
+          </div>
+          <!-- Timeline Item 2 -->
+          <div class="timeline-item" style="position: relative;">
+            <div style="position: absolute; left: -41px; top: 4px; width: 16px; height: 16px; border-radius: 50%; background: var(--blue); border: 4px solid #fff; box-shadow: 0 0 0 2px var(--blue);"></div>
+            <span style="font-size: 12px; font-weight: 800; color: var(--blue); text-transform: uppercase; letter-spacing: 0.05em;">No 3: 脆弱性検査</span>
+            <h3 style="margin: 8px 0 6px; font-size: 18px; color: var(--navy); font-weight: 800;">ソースコード脆弱性検査Agent<span style="color: green; font-size: 18px;">(作成中)</span></h3>
+            <p style="margin: 0; color: var(--muted); font-size: 14.5px; line-height: 1.7;">
+              ソースコード脆弱性検査、依存ライブラリ(npm/pip等)脆弱性検査、API Key/ Secrets 漏洩検査 を実行します。
+            </p>
+          </div>
+
+          <!-- Timeline Item 3 -->
+          <div class="timeline-item" style="position: relative;">
+            <div style="position: absolute; left: -41px; top: 4px; width: 16px; height: 16px; border-radius: 50%; background: var(--blue); border: 4px solid #fff; box-shadow: 0 0 0 2px var(--blue);"></div>
+            <span style="font-size: 12px; font-weight: 800; color: var(--blue); text-transform: uppercase; letter-spacing: 0.05em;">No 4: 上流工程の自律化支援</span>
             <h3 style="margin: 8px 0 6px; font-size: 18px; color: var(--navy); font-weight: 800;">要件吸い上げ・基本設計支援Agent</h3>
             <p style="margin: 0; color: var(--muted); font-size: 14.5px; line-height: 1.7;">
-              自然言語による対話、手元のポンチ絵、各種設計ドキュメントから仕様意図を読み取り、要件定義および基本設計書のドラフト作成を支援する上流工程エージェントを検討しています。
+              自然言語による対話、各種設計ドキュメントから仕様意図を読み取り、要件定義および基本設計書のドラフト作成を支援する上流工程エージェントを検討しています。
             </p>
           </div>
           
           <!-- Timeline Item 2 -->
           <div class="timeline-item" style="position: relative;">
             <div style="position: absolute; left: -41px; top: 4px; width: 16px; height: 16px; border-radius: 50%; background: var(--blue); border: 4px solid #fff; box-shadow: 0 0 0 2px var(--blue);"></div>
-            <span style="font-size: 12px; font-weight: 800; color: var(--blue); text-transform: uppercase; letter-spacing: 0.05em;">Phase 2: 統合テストの自律化</span>
+            <span style="font-size: 12px; font-weight: 800; color: var(--blue); text-transform: uppercase; letter-spacing: 0.05em;">No 5: 統合テストの自律化</span>
             <h3 style="margin: 8px 0 6px; font-size: 18px; color: var(--navy); font-weight: 800;">連結テストシナリオ作成Agent</h3>
             <p style="margin: 0; color: var(--muted); font-size: 14.5px; line-height: 1.7;">
               API間の相互連携や非同期のメッセージング処理を含む、複数機能をまたぐ実務フローのテスト設計とシナリオ連携テスト実行を支援する仕組みを研究しています。
@@ -500,22 +530,14 @@
           <!-- Timeline Item 3 -->
           <div class="timeline-item" style="position: relative;">
             <div style="position: absolute; left: -41px; top: 4px; width: 16px; height: 16px; border-radius: 50%; background: var(--blue); border: 4px solid #fff; box-shadow: 0 0 0 2px var(--blue);"></div>
-            <span style="font-size: 12px; font-weight: 800; color: var(--blue); text-transform: uppercase; letter-spacing: 0.05em;">Phase 3: フロント/バックエンド対応拡大</span>
+            <span style="font-size: 12px; font-weight: 800; color: var(--blue); text-transform: uppercase; letter-spacing: 0.05em;">No 6: フロント/バックエンド対応拡大</span>
             <h3 style="margin: 8px 0 6px; font-size: 18px; color: var(--navy); font-weight: 800;">React＆PHP 新規／改修Agent</h3>
             <p style="margin: 0; color: var(--muted); font-size: 14.5px; line-height: 1.7;">
-              ReactやPHPを対象にした新規開発・改修プロセスについて、対応範囲の拡大を段階的に検証します。
+              React/VueやPHPなどを対象にした新規開発・改修プロセスについて、対応範囲の拡大を段階的に検証します。
             </p>
           </div>
 
-          <!-- Timeline Item 4 -->
-          <div class="timeline-item" style="position: relative;">
-            <div style="position: absolute; left: -41px; top: 4px; width: 16px; height: 16px; border-radius: 50%; background: var(--blue); border: 4px solid #fff; box-shadow: 0 0 0 2px var(--blue);"></div>
-            <span style="font-size: 12px; font-weight: 800; color: var(--blue); text-transform: uppercase; letter-spacing: 0.05em;">Phase 4: レガシーマイグレーション</span>
-            <h3 style="margin: 8px 0 6px; font-size: 18px; color: var(--navy); font-weight: 800;">レガシーCobol解析＆改修Agent</h3>
-            <p style="margin: 0; color: var(--muted); font-size: 14.5px; line-height: 1.7;">
-              基幹システム（COBOL等）の既存レガシー資産について、解析、改修計画、モダナイゼーション支援の可能性を検証します。
-            </p>
-          </div>
+
         </div>
       </div>
     </section>
