@@ -8,14 +8,77 @@ if (menuToggle && header) {
   });
 }
 
+// 送信完了/異常メッセージバー
+function showFormToast(message, isError = false) {
+  const existing = document.querySelector(".form-toast");
+  if (existing) existing.remove();
+
+  const toast = document.createElement("div");
+  toast.className = `form-toast${isError ? " is-error" : ""}`;
+  toast.setAttribute("role", "alert");
+  toast.textContent = message;
+  document.body.appendChild(toast);
+
+  requestAnimationFrame(() => {
+    toast.classList.add("is-visible");
+  });
+
+  setTimeout(() => {
+    toast.classList.remove("is-visible");
+    toast.addEventListener("transitionend", () => toast.remove(), { once: true });
+  }, 5000);
+}
+
 document.querySelectorAll("[data-demo-form]").forEach((form) => {
-  form.addEventListener("submit", (event) => {
+  form.addEventListener("submit", async (event) => {
     event.preventDefault();
-    const result = form.querySelector("[data-form-result]");
-    if (result) {
-      result.textContent = "送信ありがとうございます。担当者より1営業日以内にご連絡します。";
+
+    const submitBtn = form.querySelector("button[type='submit']");
+    const resultEl = form.querySelector("[data-form-result]");
+    const originalText = submitBtn ? submitBtn.textContent : "";
+
+    // 按钮置忙
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.textContent = "送信中...";
     }
-    form.reset();
+
+    try {
+      const formData = new FormData(form);
+      const data = Object.fromEntries(formData.entries());
+
+      const response = await fetch("https://script.google.com/macros/s/AKfycbxWNpgk5MiijSph_3PniTPczn12MqMmmaokz_uHHjhAN9sBwXxCbPkONTSbbhrSMarqdA/exec", {
+        method: "POST",
+        headers: { "Content-Type": "text/plain;charset=utf-8" },
+        body: JSON.stringify(data),
+      });
+
+      const json = await response.json();
+
+      if (json.result === "success") {
+        showFormToast("送信が完了しました。担当者より1営業日以内にご連絡します。");
+        if (resultEl) {
+          resultEl.textContent = "送信ありがとうございます。担当者より1営業日以内にご連絡します。";
+          resultEl.style.color = "#117e73";
+        }
+        form.reset();
+        // reset intent card active state
+        document.querySelectorAll(".intent-card").forEach(c => c.classList.remove("is-active"));
+      } else {
+        throw new Error(json.message || "送信に失敗しました");
+      }
+    } catch (err) {
+      showFormToast("送信に失敗しました。時間をおいて再度お試しください。", true);
+      if (resultEl) {
+        resultEl.textContent = "送信に失敗しました。時間をおいて再度お試しください。";
+        resultEl.style.color = "#c53030";
+      }
+    } finally {
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalText;
+      }
+    }
   });
 });
 
