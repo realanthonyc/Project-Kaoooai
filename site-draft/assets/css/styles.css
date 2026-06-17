@@ -3060,7 +3060,6 @@ img { max-width: 100%; display: block; }
   position: relative;
   background: #fff;
   border-radius: 4px;
-  overflow: hidden;
   padding: 12px;
 }
 
@@ -3096,6 +3095,13 @@ img { max-width: 100%; display: block; }
   background: #000;
   border-radius: 4px;
   overflow: hidden;
+}
+
+.video-player {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
 }
 
 .breadcrumb {

@@ -271,15 +271,21 @@ document.querySelectorAll(".reveal").forEach((element) => observer.observe(eleme
   const trigger = document.querySelector("[data-video-trigger]");
   const modal = document.getElementById("video-modal");
   const closeBtn = document.querySelector("[data-video-close]");
+  const video = document.getElementById("hero-video");
 
   if (trigger && modal) {
     trigger.addEventListener("click", () => {
       modal.showModal();
+      if (video) {
+        video.currentTime = 0;
+        video.play();
+      }
     });
   }
 
   if (closeBtn && modal) {
     closeBtn.addEventListener("click", () => {
+      if (video) video.pause();
       modal.close();
     });
   }
@@ -288,6 +294,7 @@ document.querySelectorAll(".reveal").forEach((element) => observer.observe(eleme
     // Close modal when clicking outside on the backdrop
     modal.addEventListener("click", (event) => {
       if (event.target === modal) {
+        if (video) video.pause();
         modal.close();
       }
     });
